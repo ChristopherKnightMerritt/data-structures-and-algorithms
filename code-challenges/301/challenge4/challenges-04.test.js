@@ -35,35 +35,55 @@ const isCapitalized = (str) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
+Write a function named citiesAtoJ that takes in an array of city names and uses a 
+regular expression pattern to return a new array containing any cities that 
+begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let regex = /\b[a-j]\S*/gim
+  let newArr = [];
+  arr.forEach ( i => {
+      if(regex.test(i)){
+          newArr.push(i);
+      }
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-You have created a game application and begin by asking users an easy question: In which month is Halloween?
+You have created a game application and begin by 
+asking users an easy question: In which month is Halloween?
 
-Write a function named matchMonth which uses a regular expression pattern to match any of these inputs: October, Oct, october, oct
+Write a function named matchMonth which uses a regular
+ expression pattern to match any of these inputs: 
+ October, Oct, october, oct
 
-If the user enters any of these four inputs, return true. For any other input, return false.
+If the user enters any of these four inputs, return true. 
+For any other input, return false.
 
 Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
+  let regex = /(oct$)?((october)$)?/
+
+  return regex.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named noPunctuation that contains a regular expression pattern to find all of the words that contain a space immediately at the end of the word. Return an array of all such words, still containing the space at the end.
+Write a function named noPunctuation that contains a regular expression pattern 
+to find all of the words that contain a space immediately at the end of the word. 
+Return an array of all such words, still containing the space at the end.
 
-For example, if given the string "Hello, and have a wonderful day!", the word "Hello, " would not be returned because it is immediately followed by a comma. The word "day!" would not be returned because it is immediately followed by an exclamation point.
+For example, if given the string 
+"Hello, and have a wonderful day!", the word "Hello, " would not be returned 
+because it is immediately followed by a comma. The word "day!" would not be 
+returned because it is immediately followed by an exclamation point.
 
 The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "a ", "wonderful "].
 ------------------------------------------------------------------------------------------------ */
