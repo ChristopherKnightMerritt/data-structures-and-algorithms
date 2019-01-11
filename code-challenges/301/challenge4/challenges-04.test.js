@@ -68,8 +68,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  let regex = /(oct$)?((october)$)?/
-
+  let regex = /\b[oO]ct(ober)?\b/g;
   return regex.test(input);
 };
 
@@ -89,7 +88,8 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...
+  let regex = /(([a-zA-Z])\w*)\s/g;
+  return str.match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -97,15 +97,19 @@ CHALLENGE 6
 
 You want to teach a friend how to play hangman and want to show them using a partially complete puzzle.
 
-Write a function named hangman which uses the replace method to remove all of the vowels (a, e, i, o, u) from the hangman string and replace them with an underscore. 
+Write a function named hangman which uses the replace method to remove all of the 
+vowels (a, e, i, o, u) from the hangman string and replace them with an underscore. 
 
-The function should return a string containing the consonants in their original positions and underscores where the vowels were previously located.
+The function should return a string containing the consonants in their original 
+positions and underscores where the vowels were previously located.
 
 For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  // Solution code here...
+  let regex = /[aeiou]/g;
+
+  return str.replace(regex, "_");
 };
 
 /* ------------------------------------------------------------------------------------------------
