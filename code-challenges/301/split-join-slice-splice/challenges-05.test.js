@@ -14,30 +14,37 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-  let result = [];
-  // Solution code here...
-  return result;
-};
+    let result = [];
+    for(let i =0; i<=str.length; i++){
+      let p = str.slice(i);
+      result.push(p);
+    }
+    return result;
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function name wordsToCharList that, given a string as input, returns a new array where every element is a character of the input string.
+Write a function name wordsToCharList that, given a string as input, 
+returns a new array where every element is a character of the input string.
 
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  return arr.split('');
 };
 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-You are making a grocery list for ingredients needed in the gruffalo crumble recipe, below. Rather than taking the entire recipe, you only want a list of the item names.
+You are making a grocery list for ingredients needed in the gruffalo crumble recipe, below.
+Rather than taking the entire recipe, you only want a list of the item names.
 
-Write a function named listFoods that takes in the recipe and returns a new array of the food items without any amount or units. Just the name. For example, '1 cup flour' will return 'flour'.
+Write a function named listFoods that takes in the recipe and returns a new array
+of the food items without any amount or units. Just the name. 
+For example, '1 cup flour' will return 'flour'.
 
 Use slice for this function, maybe more than once. The Array.indexOf() method may also be helpful.
 
@@ -74,10 +81,13 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-  let result = [];
-  // Solution code here...
-  return result;
-}
+    let result = [];
+    recipe.ingredients.forEach(item => {
+        let i = item.indexOf(" ", item.indexOf(" ") + 1);
+        result.push(item.substring(i+1));
+    });
+    return result;
+  }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -88,31 +98,47 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
-  let result = [];
-  // Solution code here...
-  return result;
-}
+    let result = [];
+    recipe.ingredients.forEach(item =>{
+      let i = item.split(" ");
+      let place = "";
+      for (let j = 2; j< i.length; j++){
+      if(j == 2){
+          place += i[j];
+      }
+      else{
+          place += " " +i[j];
+      }	
+      }
+      result.push(place);
+    }) ; 
+    return result;
+  }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
 Use the same recipe from Challenge 3, above.
 
-Write a function named stepAction that takes in the recipe and extracts the action verbs from the steps. Fortunate for you, the action verbs are the first word of each action.
+Write a function named stepAction that takes in the recipe and extracts the action
+verbs from the steps. Fortunate for you, the action verbs are the first word of each action.
 
 Return a new array containing just the verbs. For example, ['Mix until evenly distributed'] returns ['Mix'].
 ------------------------------------------------------------------------------------------------ */
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.steps.forEach(item =>{
+      result.push(item.split(" ")[0]);
+  })
   return result;
 }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named removeEvenValues that, given an array of integers as input, deletes all even values from the array, leaving no 'gaps' behind.
+Write a function named removeEvenValues that, given an array of integers as input, 
+deletes all even values from the array, leaving no 'gaps' behind.
 
 The array should be modified in-place.
 
@@ -123,17 +149,26 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
-};
+    for (let i = 0; i< arr.length; i++){
+        if(arr[i]%2 == 0){
+      arr.splice(i--, 1);
+      }
+    }
+    return arr;
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
 
-Write a function named removeLastCharacters that takes in a string and a number. The numberOfCharacters argument determines how many characters will be removed from the end of the string. Return the resulting string.
+Write a function named removeLastCharacters that takes in a string and a number. 
+The numberOfCharacters argument determines how many characters will be removed from 
+the end of the string. Return the resulting string.
 
-If the numberOfCharacters argument is greater than the length of the input string, the function should return an empty string.
+If the numberOfCharacters argument is greater than the length of the input string, 
+the function should return an empty string.
 
-If the numberOfCharacters argument input is a negative number, the function should return the input string without any changes.
+If the numberOfCharacters argument input is a negative number, 
+the function should return the input string without any changes.
 
 For example:
 removeLastCharacters('Gregor', 2) returns 'Greg'
@@ -142,7 +177,15 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+  if(str.length <= numberOfCharacters){
+      return '';
+  }
+  else if(numberOfCharacters <= 0){
+    return str;
+  }else{
+    str = str.slice(0, str.length-numberOfCharacters);
+    return str;
+  }
 };
 
 
