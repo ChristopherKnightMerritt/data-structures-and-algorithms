@@ -12,5 +12,8 @@ Initially, we wrote the function assuming that we could use the '.push' method o
 
 Big O: O(n)
 
+Pull request: https://github.com/ChristopherKnightMerritt/data-structures-and-algorithms/pull/18
+
+
 ## Solution
 ![](../../../assets/arrayShiftWhiteboard.jpg)
