@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --coverage --verbose --testPathIgnorePatterns code-challenges/301/",
     "test-watch": "jest --coverage --verbose --watchAll",
-    "lint": "eslint **/*.js --no-eslintrc code-challenges/301",
+    "lint": "eslint **/*.js --no-eslintrc code-challenges/301/",
     "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
   },
   "repository": {

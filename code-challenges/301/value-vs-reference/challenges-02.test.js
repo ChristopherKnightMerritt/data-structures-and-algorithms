@@ -11,7 +11,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 const appendTheEnd = (str) => {
   str+=' The end.';
   return str;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -28,7 +28,7 @@ console.log(a) prints [1, 2, 3, 1]
 
 const appendFirstToLast = (arr) => {
   arr.push(arr[0]);
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -47,7 +47,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   obj.yearBorn = year;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -67,9 +67,9 @@ const setStatusAsAuthor = (people) => {
     p.isAuthor = true;
   }
 
-);
+  );
 
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -91,7 +91,7 @@ const append = (arr1, arr2) => {
     arr1.push(val);
   });
 
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS

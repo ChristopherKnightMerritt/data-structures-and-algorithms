@@ -14,13 +14,13 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-    let result = [];
-    for(let i =0; i<=str.length; i++){
-      let p = str.slice(i);
-      result.push(p);
-    }
-    return result;
-  };
+  let result = [];
+  for(let i =0; i<=str.length; i++){
+    let p = str.slice(i);
+    result.push(p);
+  }
+  return result;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -76,18 +76,18 @@ const gruffaloCrumble = {
     'Fold together remaining ingredients to make the crisp',
     'Spread the crisp evenly over the gruffalo mixture',
     'Bake for 12-15 hours',
-  ]
-}
+  ],
+};
 
 
 const listFoods = (recipe) => {
-    let result = [];
-    recipe.ingredients.forEach(item => {
-        let i = item.indexOf(" ", item.indexOf(" ") + 1);
-        result.push(item.substring(i+1));
-    });
-    return result;
-  }
+  let result = [];
+  recipe.ingredients.forEach(item => {
+    let i = item.indexOf(' ', item.indexOf(' ') + 1);
+    result.push(item.substring(i+1));
+  });
+  return result;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -98,22 +98,22 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
-    let result = [];
-    recipe.ingredients.forEach(item =>{
-      let i = item.split(" ");
-      let place = "";
-      for (let j = 2; j< i.length; j++){
+  let result = [];
+  recipe.ingredients.forEach(item =>{
+    let i = item.split(' ');
+    let place = '';
+    for (let j = 2; j< i.length; j++){
       if(j == 2){
-          place += i[j];
+        place += i[j];
       }
       else{
-          place += " " +i[j];
+        place += ' ' +i[j];
       }	
-      }
-      result.push(place);
-    }) ; 
-    return result;
-  }
+    }
+    result.push(place);
+  }) ; 
+  return result;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -129,10 +129,10 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 const stepActions = (recipe) => {
   let result = [];
   recipe.steps.forEach(item =>{
-      result.push(item.split(" ")[0]);
-  })
+    result.push(item.split(' ')[0]);
+  });
   return result;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -149,13 +149,13 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-    for (let i = 0; i< arr.length; i++){
-        if(arr[i]%2 == 0){
+  for (let i = 0; i< arr.length; i++){
+    if(arr[i]%2 == 0){
       arr.splice(i--, 1);
-      }
     }
-    return arr;
-  };
+  }
+  return arr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -178,7 +178,7 @@ removeLastCharacters('Gregor', 9) returns ''
 
 const removeLastCharacters = (str, numberOfCharacters) => {
   if(str.length <= numberOfCharacters){
-      return '';
+    return '';
   }
   else if(numberOfCharacters <= 0){
     return str;

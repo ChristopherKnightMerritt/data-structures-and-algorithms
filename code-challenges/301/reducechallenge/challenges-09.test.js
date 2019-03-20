@@ -48,7 +48,7 @@ let starWarsData = [{
   skin_color: 'white, blue',
   eye_color: 'red',
   birth_year: '33BBY',
-  gender: 'n/a'
+  gender: 'n/a',
 },
 {
   name: 'Darth Vader',
@@ -58,7 +58,7 @@ let starWarsData = [{
   skin_color: 'white',
   eye_color: 'yellow',
   birth_year: '41.9BBY',
-  gender: 'male'
+  gender: 'male',
 },
 {
   name: 'Leia Organa',
@@ -68,13 +68,13 @@ let starWarsData = [{
   skin_color: 'light',
   eye_color: 'brown',
   birth_year: '19BBY',
-  gender: 'female'
-}]
+  gender: 'female',
+}];
 
 const returnNames = (arr) => {
   return arr.reduce( (acc, val) => {
-      acc.push(val.name);
-      return acc;
+    acc.push(val.name);
+    return acc;
   }, []);
 };
 
@@ -87,11 +87,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (arr) => {
-    let arrStr = arr.split('');
-    let result = arrStr.reduce((acc, val)=>{
-        return val + acc;
-    });
-    return result;
+  let arrStr = arr.split('');
+  let result = arrStr.reduce((acc, val)=>{
+    return val + acc;
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -190,7 +190,7 @@ const countPrimeNumbers = (arr) => {
     }
     return acc;
   },0);
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal

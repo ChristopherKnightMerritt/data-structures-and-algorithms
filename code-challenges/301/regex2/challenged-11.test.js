@@ -9,8 +9,8 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePin = (pin) => {
-    let regex = /^\d{4}(?:\d{2})?$/;
-    return regex.test(pin)
+  let regex = /^\d{4}(?:\d{2})?$/;
+  return regex.test(pin);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -71,7 +71,7 @@ findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])
 
 const findTagNames = elements => {
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -123,7 +123,7 @@ describe('Testing challenge 2', () => {
     expect(validateEmail('missing.atsymbol.net')).toBeFalsy();
     expect(validateEmail('looksgood@sofar.comohnowaitthisisbad')).toBeFalsy();
     expect(validateEmail('no.middle.names@foryou.com')).toBeFalsy();
-  })
+  });
 });
 
 describe('Testing challenge 3', () => {
@@ -147,7 +147,7 @@ describe('Testing challenge 3', () => {
     expect(validatePhoneNumber('55555555555')).toBeFalsy();
     expect(validatePhoneNumber('55555555555')).toBeFalsy();
     expect(validatePhoneNumber('55_55_5555')).toBeFalsy();
-  })
+  });
 });
 
 describe('Testing challenge 4', () => {

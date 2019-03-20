@@ -8,11 +8,11 @@ Then, write a function named speaker that takes in a string and a callback funct
 
 const greeting = (word) => {
   return word.toUpperCase();
-}
+};
 
 const speaker = (message, callback) => {
   return greeting(message);
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -28,14 +28,14 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   arr.push(value);
-}
+};
 
 const addNumbers = (num, arr, times, callback) => {
   for(let i =0; i< times; i++){
     addValues(arr,num);
   }
   return arr;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -49,14 +49,14 @@ const removeOne = (num, arr) => {
   if(num%3 == 2){
     arr.pop();
   }
-}
+};
 
 const removeElements = (arr, callback) => {
   for(let i=0; i<=arr.length; i++){
     removeOne(i, arr);
   }
   return arr;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -68,7 +68,7 @@ const removeWithForEach = (arr, callback) => {
     removeOne(i, arr);
   });
   return arr;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -84,7 +84,7 @@ const removeWithAnon = (arr) => {
     }
   });
   return arr;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -105,10 +105,10 @@ const createList = (availableItems) => {
   availableItems.forEach( i =>{
     if(i.available){
       list.push(i.name);
-    };
+    }
   });
   return list;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -124,13 +124,13 @@ Return the resulting output array.
 const fizzbuzz = (arr) => {
   let out = [];
   arr.forEach(i => {
-    if(i%15 == 0){out.push("Fizz Buzz")}
-    else if (i%5 == 0) {out.push("Buzz")}
-    else if (i%3 == 0) {out.push("Fizz")}
-    else {out.push(i)}
+    if(i%15 == 0){out.push('Fizz Buzz');}
+    else if (i%5 == 0) {out.push('Buzz');}
+    else if (i%3 == 0) {out.push('Fizz');}
+    else {out.push(i);}
   });
   return out;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
