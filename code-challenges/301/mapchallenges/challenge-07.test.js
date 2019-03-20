@@ -14,11 +14,11 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-    let result=[];
-    for(let i = 0; i < arr.length; i++){
-        result.push(Math.pow(2,arr[i]));
-    }
-    return result;
+  let result=[];
+  for(let i = 0; i < arr.length; i++){
+    result.push(Math.pow(2,arr[i]));
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,10 +31,10 @@ function from challenge 1, but uses forEach instead of a for loop.
 
 const forEachTwoToThe = (arr) => {
   let powArr=[];
-    arr.forEach(item =>{
-        powArr.push(Math.pow(2,item));
-    })
-    return powArr;
+  arr.forEach(item =>{
+    powArr.push(Math.pow(2,item));
+  });
+  return powArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,8 +44,8 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-    return arr.map(item=> (Math.pow(2, item)));
-}
+  return arr.map(item=> (Math.pow(2, item)));
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -79,14 +79,14 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 const evenOdd = (arr) => {
   let result = arr.map(item=>{
     if(isNaN(item)){
-        return 'N/A';
+      return 'N/A';
     }
     if( item % 2 == 0 ){
-          return 'even';
-      }
-      else{
-          return 'odd';
-      }
+      return 'even';
+    }
+    else{
+      return 'odd';
+    }
   });
   return result;
 };
@@ -187,7 +187,7 @@ const snorlaxStats = {
 
 const extractStats = (arr) => {
   let snorArr = arr.map(item =>{
-      return {name: item.stat.name, total: (item.effort+item.baseStat)};
+    return {name: item.stat.name, total: (item.effort+item.baseStat)};
   });
   return snorArr;
 };
@@ -275,9 +275,9 @@ describe('Testing challenge 6', () => {
 describe('Testing challenge 7', () => {
   test('It should return an array containing objects with name and total values', () => {
     expect(extractStats(snorlaxStats.stats)).toStrictEqual([
-      { name: 'speed', total: 35, },
-      { name: 'special-defense', total: 112, },
-      { name: 'special-attack', total: 74, },
+      { name: 'speed', total: 35 },
+      { name: 'special-defense', total: 112 },
+      { name: 'special-attack', total: 74 },
     ]);
     expect(extractStats(snorlaxStats.stats).length).toStrictEqual(3);
   });

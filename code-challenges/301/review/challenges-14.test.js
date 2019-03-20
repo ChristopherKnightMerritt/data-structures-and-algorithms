@@ -40,7 +40,7 @@ let starWarsData = [{
   skin_color: 'gold',
   eye_color: 'yellow',
   birth_year: '112BBY',
-  gender: 'n/a'
+  gender: 'n/a',
 },
 {
   name: 'R2-D2',
@@ -50,7 +50,7 @@ let starWarsData = [{
   skin_color: 'white, blue',
   eye_color: 'red',
   birth_year: '33BBY',
-  gender: 'n/a'
+  gender: 'n/a',
 },
 {
   name: 'Darth Vader',
@@ -60,7 +60,7 @@ let starWarsData = [{
   skin_color: 'white',
   eye_color: 'yellow',
   birth_year: '41.9BBY',
-  gender: 'male'
+  gender: 'male',
 },
 {
   name: 'Leia Organa',
@@ -70,7 +70,7 @@ let starWarsData = [{
   skin_color: 'light',
   eye_color: 'brown',
   birth_year: '19BBY',
-  gender: 'female'
+  gender: 'female',
 },
 {
   name: 'Pex Kylar',
@@ -80,20 +80,20 @@ let starWarsData = [{
   skin_color: 'brown',
   eye_color: 'none',
   birth_year: '27BBY',
-  gender: 'n/a'
-}]
+  gender: 'n/a',
+}];
 
 let biggerThanLuke = (arr) => {
-  let result = "";
+  let result = '';
   let check = parseInt(arr[0].mass);
   arr.forEach(item=>{
-      if(parseInt(item.mass) > check){
-          result= result+ item.name + ' - ';
-      }
+    if(parseInt(item.mass) > check){
+      result= result+ item.name + ' - ';
+    }
   });
   result = result.slice(0, -3);
   return result;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -127,8 +127,8 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-  return (url.substring(0,8) === "https://") ? true: false;
-}
+  return (url.substring(0,8) === 'https://') ? true: false;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
@@ -151,7 +151,7 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -186,7 +186,7 @@ describe('Testing challenge 3', () => {
     expect(sortBy('price', [
       {name: 'Sweatshirt', price: 45},
       {name: 'Bookmark', price: 2.50},
-      {name: 'Tote bag', price: 15}
+      {name: 'Tote bag', price: 15},
     ])).toStrictEqual([
       {name: 'Bookmark', price: 2.50},
       {name: 'Tote bag', price: 15},
@@ -200,7 +200,7 @@ describe('Testing challenge 3', () => {
     expect(sortBy('name', [
       {name: 'Sweatshirt', price: 45},
       {name: 'Bookmark', price: 2.50},
-      {name: 'Tote bag', price: 15}
+      {name: 'Tote bag', price: 15},
     ])).toStrictEqual([
       {name: 'Bookmark', price: 2.50},
       {name: 'Sweatshirt', price: 45},

@@ -30,14 +30,14 @@ const grandTotal = (stores) => {
   let count = 0;
   for(let i=0; i<stores[0].length; i++){
     for(let j=0; j< stores.length; j++){
-        count+= stores[j][i];
+      count+= stores[j][i];
     }
     result.push(count);
     count=0;
   }
   return result;
 
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -78,27 +78,27 @@ Write a function named howManyTreats that will return the quantity of treats you
 
 const errands = [
   { store: 'Grocery store',
-    items: [ { name: 'Eggs', quantity: 12 }, { name: 'Milk', quantity: 1 }, { name: 'Apples', quantity: 3 }]
+    items: [ { name: 'Eggs', quantity: 12 }, { name: 'Milk', quantity: 1 }, { name: 'Apples', quantity: 3 }],
   },
   { store: 'Drug store',
-    items: [ { name: 'Toothpaste', quantity: 1 }, { name: 'Toothbrush', quantity: 3 }, { name: 'Mouthwash',quantity: 1 } ]
+    items: [ { name: 'Toothpaste', quantity: 1 }, { name: 'Toothbrush', quantity: 3 }, { name: 'Mouthwash',quantity: 1 } ],
   },
   { store: 'Pet store',
-    items: [ { name: 'Cans of food', quantity: 8 }, { name: 'Treats', quantity: 24 }, { name: 'Leash', quantity: 1 } ]
-  }
-]
+    items: [ { name: 'Cans of food', quantity: 8 }, { name: 'Treats', quantity: 24 }, { name: 'Leash', quantity: 1 } ],
+  },
+];
 
 const howManyTreats = (arr) => {
   let treatcount = 0;
   arr.forEach(item => {
     item.items.forEach(i => {
-        if(i.name === 'Treats'){
-            treatcount+= i.quantity; 
-        }
-    })
-  })
+      if(i.name === 'Treats'){
+        treatcount+= i.quantity; 
+      }
+    });
+  });
   return treatcount;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -121,14 +121,14 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   for(let i = 0; i < board.length; i++){
-      for(let j = 0; j < board[i].length; j++){
-          if(board[row][col] === '#'){
-            return "hit";
-          }
+    for(let j = 0; j < board[i].length; j++){
+      if(board[row][col] === '#'){
+        return 'hit';
       }
+    }
   }
-  return "miss";
-}
+  return 'miss';
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -143,12 +143,12 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 const calculateProduct = (numbers) => {
   let result = 0;
   for(let i = 0; i < numbers.length; i++){
-      for(let j = 1; j < numbers[i].length; j++){
-        result = result * (numbers[i][j-1] * numbers[i][j]);
-      }
+    for(let j = 1; j < numbers[i].length; j++){
+      result = result * (numbers[i][j-1] * numbers[i][j]);
+    }
   }
   return result;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -169,15 +169,15 @@ const weeklyTemperatures = [
 const averageDailyTemperature = (weather) => {
   let result = 0;
   for(let i = 0; i<weather.length; i++){
-      let count = 1;
-      for( let j = 0; j<weather[i].length; j++){
-          count = count + weather[i][j];
-      }
-      result += count/weather[i].length;
+    let count = 1;
+    for( let j = 0; j<weather[i].length; j++){
+      count = count + weather[i][j];
+    }
+    result += count/weather[i].length;
   }
   result = result/weather.length;
   return result;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -200,15 +200,15 @@ const lowestWeeklyAverage = (weather) => {
   let arr = [];
   let avg = 0;
   for(let i = 0; i < weather.length; i++){
-      for(let j = 0; j < weather[i].length; j++){
-          avg += weather[i][j];
-      }
-      avg = avg/weather[i].length;
-      arr.push(avg);
-      avg = 0;
+    for(let j = 0; j < weather[i].length; j++){
+      avg += weather[i][j];
+    }
+    avg = avg/weather[i].length;
+    arr.push(avg);
+    avg = 0;
   }
   return Math.min.apply(null, arr);
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
@@ -223,18 +223,18 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
-  let arr = str.split("\n");
+  let arr = str.split('\n');
   console.log(arr);
   let result = [];
   for(let i = 0; i<arr.length; i++){
-      let count = 0;
-      for(let j = 0; j < arr.length; j++){
-        count+= parseInt(arr[i][j]);
-      }
-      result.push(count);
+    let count = 0;
+    for(let j = 0; j < arr.length; j++){
+      count+= parseInt(arr[i][j]);
+    }
+    result.push(count);
   }
   return result;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -268,7 +268,7 @@ describe('Testing challenge 2', () => {
       { sales: '276 cookies', time: '5 p.m.' },
       { sales: '207 cookies', time: '6 p.m.' },
       { sales: '161 cookies', time: '7 p.m.' },
-      { sales: '169 cookies', time: '8 p.m.' }
+      { sales: '169 cookies', time: '8 p.m.' },
     ]);
 
     expect(salesData(hoursOpen, grandTotal(cookieStores)).length).toStrictEqual(hoursOpen.length);

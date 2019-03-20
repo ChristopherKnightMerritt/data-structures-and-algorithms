@@ -13,7 +13,7 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  let regex = /\d/
+  let regex = /\d/;
 
   return regex.test(input);
 };
@@ -28,7 +28,7 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let regex = /\b[A-Z]\S*/gm
+  let regex = /\b[A-Z]\S*/gm;
   return str.match(regex);
 };
 
@@ -41,13 +41,13 @@ begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  let regex = /\b[a-j]\S*/gim
+  let regex = /\b[a-j]\S*/gim;
   let newArr = [];
   arr.forEach ( i => {
-      if(regex.test(i)){
-          newArr.push(i);
-      }
-  })
+    if(regex.test(i)){
+      newArr.push(i);
+    }
+  });
   return newArr;
 };
 
@@ -109,7 +109,7 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 let hangman = (str) => {
   let regex = /[aeiou]/g;
 
-  return str.replace(regex, "_");
+  return str.replace(regex, '_');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -202,7 +202,7 @@ describe('Testing challenge 5', () => {
   });
 
   test('It should not contain words that are followed by any non-space character', () => {
-    expect(noPunctuation(lorem)).not.toContain(['amet,', 'elit.', 'egestas.', 'elit,', 'sed.', 'sem,', 'diam.', 'nibh.', 'porttitor.', 'euismod,', 'ultrices.', 'massa,', 'vel,', 'purus.', 'purus,', 'odio.', 'aliquet,', 'non,', 'sem.'])
+    expect(noPunctuation(lorem)).not.toContain(['amet,', 'elit.', 'egestas.', 'elit,', 'sed.', 'sem,', 'diam.', 'nibh.', 'porttitor.', 'euismod,', 'ultrices.', 'massa,', 'vel,', 'purus.', 'purus,', 'odio.', 'aliquet,', 'non,', 'sem.']);
   });
 });
 

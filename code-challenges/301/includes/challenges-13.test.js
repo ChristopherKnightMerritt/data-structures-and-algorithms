@@ -21,10 +21,10 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  let res = []
-    arr.forEach(item => {
+  let res = [];
+  arr.forEach(item => {
     if(item.includes(':)')){
-        res.push(item);
+      res.push(item);
     }
   });
   return res;
@@ -40,10 +40,10 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   let res = [];
-    arr.forEach(item =>{
-        res.push(item.substring(1,4) + item.substring(6,9) + item.substring(10));
-    });
-    return res;
+  arr.forEach(item =>{
+    res.push(item.substring(1,4) + item.substring(6,9) + item.substring(10));
+  });
+  return res;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ const allHappy = (arr) => {
   let res = true;
   arr.forEach(item =>{
     if(!item.includes(':)')){
-        res = false;
+      res = false;
     }
   });
   return res;
@@ -87,9 +87,9 @@ Write a function named findAnything that takes in an array of strings, along wit
 const findAnything = (arr, target) => {
   let res=[];
   arr.forEach(item => {
-      if(item.includes(target)){
-          res.push(item);
-      }
+    if(item.includes(target)){
+      res.push(item);
+    }
   });
   return res;
 };
@@ -103,9 +103,9 @@ Write a function named findEvery that takes in an array of strings, along with a
 const findEvery = (arr, target) => {
   let res = true;
   arr.forEach(item =>{
-      if(!item.includes(target)){
-        res=false;
-      }
+    if(!item.includes(target)){
+      res=false;
+    }
   });
   return res;
 };
@@ -126,14 +126,14 @@ const unenrollBrook = (arr) => {
   let res= [];
   let fill = [];
   arr.forEach(item =>{
-      fill=[];
-      item.forEach(i =>{
-        if(!i.includes("Brook")){
-            fill.push(i);
-          }
-      });
-      res.push(fill);
-  })
+    fill=[];
+    item.forEach(i =>{
+      if(!i.includes('Brook')){
+        fill.push(i);
+      }
+    });
+    res.push(fill);
+  });
   return res;
 };
 
@@ -260,13 +260,13 @@ describe('Testing challenge 8', () => {
     const roster = [
       ['Michelle', 'Allie', 'Brook TESTING'],
       ['Brook Riggio', 'hey look it\'s Brook', 'Jennifer'],
-      ['Nicholas', 'Sam', 'Scott', 'Vinicio']
+      ['Nicholas', 'Sam', 'Scott', 'Vinicio'],
     ];
 
     expect(unenrollBrook(roster)).toStrictEqual([
       ['Michelle', 'Allie'],
       ['Jennifer'],
-      ['Nicholas', 'Sam', 'Scott', 'Vinicio']
+      ['Nicholas', 'Sam', 'Scott', 'Vinicio'],
     ]);
     expect(unenrollBrook([['Brook', 'person'], [], ['person', 'person', 'Brook']])).toStrictEqual([['person'], [], ['person', 'person']]);
     expect(unenrollBrook([])).toStrictEqual([]);

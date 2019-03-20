@@ -13,7 +13,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 
 const getCourseKeys = (obj) => {
   return Object.keys(obj);
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -27,53 +27,53 @@ let characters = [
     name: 'Eddard',
     spouse: 'Catelyn',
     children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
-    house: 'Stark'
+    house: 'Stark',
   },
   {
     name: 'Jon A.',
     spouse: 'Lysa',
     children: ['Robin'],
-    house: 'Arryn'
+    house: 'Arryn',
   },
   {
     name: 'Cersei',
     spouse: 'Robert',
     children: ['Joffrey', 'Myrcella', 'Tommen'],
-    house: 'Lannister'
+    house: 'Lannister',
   },
   {
     name: 'Daenarys',
     spouse: 'Khal Drogo',
     children: ['Drogon', 'Rhaegal', 'Viserion'],
-    house: 'Targaryen'
+    house: 'Targaryen',
   },
   {
     name: 'Mace',
     spouse: 'Alerie',
     children: ['Margaery', 'Loras'],
-    house: 'Tyrell'
+    house: 'Tyrell',
   },
   {
     name: 'Sansa',
     spouse: 'Tyrion',
     children: [],
-    house: 'Stark'
+    house: 'Stark',
   },
   {
     name: 'Jon S.',
     spouse: null,
     children: [],
-    house: 'Snow'
-  }
-]
+    house: 'Snow',
+  },
+];
 
 const totalCharacters = (arr) => {
-    let result = 0;
+  let result = 0;
   arr.forEach(item=>{
     result++;
   });
   return result;
-}
+};
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -84,10 +84,10 @@ Write a function named getHouses that returns a new array containing the names o
 const getHouses = (arr) => {
   let houses = [];
   arr.forEach(item =>{
-      houses.push(item.house);
-  })
+    houses.push(item.house);
+  });
   return houses;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -102,16 +102,16 @@ hasChildrenValues(characters, 'Eddard') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-    let b = false;
- arr.forEach(item =>{
-     if(item.name === character){
-       if(item.children.length > 1){
-         b = true;
-     }
-   }
- });
- return b;
-}
+  let b = false;
+  arr.forEach(item =>{
+    if(item.name === character){
+      if(item.children.length > 1){
+        b = true;
+      }
+    }
+  });
+  return b;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -123,16 +123,16 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-    let b = false;
-    Object.entries(arr).forEach(entry =>{
-        if(entry[1].name === character){
-           if(entry[1].children.length > 1){
-           b = true;
-       }
-       }
-    });
-    return b;
-}
+  let b = false;
+  Object.entries(arr).forEach(entry =>{
+    if(entry[1].name === character){
+      if(entry[1].children.length > 1){
+        b = true;
+      }
+    }
+  });
+  return b;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
@@ -148,7 +148,7 @@ const houseSize = (arr) => {
   const sizes = [];
   // Solution code here...
   return sizes;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -172,7 +172,7 @@ const houseSurvivors = (arr) => {
   const survivors = [];
   // Solution code here...
   return survivors;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS

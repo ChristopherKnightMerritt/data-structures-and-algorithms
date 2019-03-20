@@ -8,8 +8,8 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 
 const sortBackwards = (arr) => {
   return arr.sort( (a,b) => {
-      return b-a;
-    });
+    return b-a;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,9 +33,9 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-    return arr.sort( (a,b) => {
-        return a.length-b.length;
-      });
+  return arr.sort( (a,b) => {
+    return a.length-b.length;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,9 +47,9 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-    return arr.sort( (a,b) => {
-        return a.toLowerCase().localeCompare(b.toLowerCase());
-      });
+  return arr.sort( (a,b) => {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,9 +66,9 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-    return arr.sort( (a,b) => {
-        return a.price-b.price;
-      });
+  return arr.sort( (a,b) => {
+    return a.price-b.price;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,11 +80,11 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
-    return arr.sort( (a, b) => {
-        let stringA = a.toString();
-        let stringB = b.toString();
-        return stringA.length - stringB.length;
-      });
+  return arr.sort( (a, b) => {
+    let stringA = a.toString();
+    let stringB = b.toString();
+    return stringA.length - stringB.length;
+  });
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -108,7 +108,7 @@ const people = [
 const sortPeople = (arr) => {
   return arr.sort( (a, b)=> {
     return a.lastName.localeCompare(b.lastName);
-  })
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,15 +125,15 @@ If two people have the same full name, the younger one should come first. Do not
 const sortPeopleBetter = (arr) => {
   return arr.sort( (a,b) =>{
     if(a.lastName === b.lastName){
-        if(a.firstName === b.firstName){
-            return a.age-b.age;
-        }
-        else{
-            return a.firstName.toLowerCase().localeCompare(b.firstName.toLowerCase());
-        }
+      if(a.firstName === b.firstName){
+        return a.age-b.age;
+      }
+      else{
+        return a.firstName.toLowerCase().localeCompare(b.firstName.toLowerCase());
+      }
     }
     else {
-        return a.lastName.localeCompare(b.lastName);
+      return a.lastName.localeCompare(b.lastName);
     }
   });
 };
@@ -232,7 +232,7 @@ describe('Testing challenge 5', () => {
     expect(sortByPrice([
       {name: 'Sweatshirt', price: 45},
       {name: 'Bookmark', price: 2.50},
-      {name: 'Tote bag', price: 15}
+      {name: 'Tote bag', price: 15},
     ])).toStrictEqual([
       {name: 'Bookmark', price: 2.50},
       {name: 'Tote bag', price: 15},
@@ -247,7 +247,7 @@ describe('Testing challenge 6', () => {
   test('It should sort numbers by their length', () => {
     expect(sortNumbersByLength([10, 2.8, 1, -47.75])).toStrictEqual([1, 10, 2.8, -47.75]);
     expect(sortNumbersByLength([100, 2.82, 1, -47.75])).toStrictEqual([1, 100, 2.82, -47.75]);
-    expect(sortNumbersByLength([1,2,3])).toEqual(expect.arrayContaining([1,2,3]))
+    expect(sortNumbersByLength([1,2,3])).toEqual(expect.arrayContaining([1,2,3]));
   });
 });
 
