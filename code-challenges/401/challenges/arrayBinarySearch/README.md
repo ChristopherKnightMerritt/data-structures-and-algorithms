@@ -16,4 +16,4 @@ Pull request: https://github.com/ChristopherKnightMerritt/data-structures-and-al
 
 
 ## Solution
-![Whiteboard](./../../../assets/binary-searchWB.jpg)
+![Whiteboard](https://github.com/ChristopherKnightMerritt/data-structures-and-algorithms/blob/master/code-challenges/assets/binary-searchWB.JPG)
