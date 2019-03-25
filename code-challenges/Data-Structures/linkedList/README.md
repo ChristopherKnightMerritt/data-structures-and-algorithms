@@ -1,4 +1,4 @@
-
+[![Build Status](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms)
 
 # Singly Linked List
 A linked list is used to store a value then point to the next value in the list. At the end, it points to null.
