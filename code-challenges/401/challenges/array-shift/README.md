@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms)
+
 # Insert and shift middle index of array
 Code challenge 02. 
 Whiteboard completed with Aaron Ferris and Joseph Wolfe.
