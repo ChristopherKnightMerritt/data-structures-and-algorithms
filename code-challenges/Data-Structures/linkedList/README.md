@@ -19,6 +19,9 @@ The challenge was to create a linked list class from scratch. It contains nodes 
 -insertAfter(val, newVal){
     Inserts a new node after the specified value.
 }
+-findFromEnd(k){
+    Finds the value k nodes from the end.
+}
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -37,7 +40,14 @@ Insert runs at O(1), includes runs at O(n), and print runs at O(n).
 3. Insert After:
     The approach was to check if the current value was equal to the replacement value. If yes, then set the current value to point to a new node, then set the new node to point to a next value.
 
+-----Part III------
+
+    Distance from end:
+    The approach was to find the current value after k values through the list, then start another counter. From then on, after each iteration both counters increase. Once the first one hits null, the second will be at the vale at k.
+    Big O: O(n)
+
 ### Whiteboard images:
 ![IMG1](../../assets/linkedlist2pt1.jpg)
 ![IMG2](../../assets/linkedlist2pt2.jpg)
 
+![IMG3](../../assets/linkedlist3.jpg)
