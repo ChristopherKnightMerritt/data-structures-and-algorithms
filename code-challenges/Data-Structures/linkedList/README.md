@@ -38,6 +38,6 @@ Insert runs at O(1), includes runs at O(n), and print runs at O(n).
     The approach was to check if the current value was equal to the replacement value. If yes, then set the current value to point to a new node, then set the new node to point to a next value.
 
 ### Whiteboard images:
-[!https://github.com/ChristopherKnightMerritt/data-structures-and-algorithms/blob/ll_insertions/code-challenges/assets/linkedlist2pt1.jpg]
+![IMG1](../../assets/linkedlist2pt1.jpg)
+![IMG2](../../assets/linkedlist2pt2.jpg)
 
-[!https://github.com/ChristopherKnightMerritt/data-structures-and-algorithms/blob/ll_insertions/code-challenges/assets/linkedlist2pt2.jpg]
