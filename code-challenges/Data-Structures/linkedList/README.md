@@ -47,7 +47,9 @@ Insert runs at O(1), includes runs at O(n), and print runs at O(n).
     Big O: O(n)
 
 ### Whiteboard images:
+Part 2:
 ![IMG1](../../assets/linkedlist2pt1.jpg)
 ![IMG2](../../assets/linkedlist2pt2.jpg)
 
-![IMG3](../../assets/linkedlist3.jpg)
+Part 3:
+![IMG3](../../assets/linkedlist3.JPG)
