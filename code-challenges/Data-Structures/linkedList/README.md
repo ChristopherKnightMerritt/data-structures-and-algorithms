@@ -15,7 +15,7 @@ The challenge was to create a linked list class from scratch. It contains nodes 
     Inserts a new node at the end of the list.
 -insertBefore(val, newVal){
     Inserts a new node before the specified value.
-}
+} 
 -insertAfter(val, newVal){
     Inserts a new node after the specified value.
 }
