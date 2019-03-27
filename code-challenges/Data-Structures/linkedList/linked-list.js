@@ -76,6 +76,44 @@ class LinkedList{
       curr = curr.next;
     }
   }
+  findFromEnd(k){
+    if(k === 1 || this.head.next === null){
+      return null;
+    }
+    if(this.head !== null){
+      let container1 = this.head;
+      let container2 = this.head;
+      let counter = 0;
+      while(container1){
+        if(counter<k){
+          container1 = container1.next;
+          counter ++;
+        }
+        else{
+          container2 = container2.next;
+          container1 = container1.next;
+        }
+      }
+      if(counter < k){
+        return null;
+      }
+      else{
+        return container2.val;
+      }
+    }
+  }
 }
 
 module.exports = {Node, LinkedList};
+
+let ll = new LinkedList;
+
+ll.insert(5);
+ll.insert(4);
+ll.insert(3);
+ll.insert(2);
+ll.insert(1);
+
+console.log(ll.print());
+
+console.log(ll.findFromEnd(4));

@@ -63,3 +63,34 @@ describe('linked list methods pt. 2', ()=>{
     expect().toEqual();
   });
 });
+/*
+Where k is greater than the length of the linked list
+Where k and the length of the list are the same
+Where k is not a positive integer
+Where the linked list is of a size 1
+“Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+*/
+
+describe('Linked list part 3', () => {
+  let ll3 = new linkedList.LinkedList();
+  ll3.insert(1);
+  it('Should return null if k is greater than the length of the linked list', () =>{
+    expect(ll3.findFromEnd(10)).toBeNull();
+  }),
+  it('should return null if k and the length of the list are the same', () => {
+    expect(ll3.findFromEnd(1)).toBeNull();
+  }),
+  it('should return null if k is not a positive integer', () => {
+    expect(ll3.findFromEnd(-2)).toBeNull();
+  });
+  it('should return null if the linked list is a size of 1', () => {
+    expect(ll3.findFromEnd(1)).toBeNull();
+  });
+  it('should return the correct value from the list:', () => {
+    ll3.insert(2);
+    ll3.insert(3);
+    ll3.insert(4);
+    ll3.insert(5);
+    expect(ll3.findFromEnd(3)).toBe(3);
+  });
+});
