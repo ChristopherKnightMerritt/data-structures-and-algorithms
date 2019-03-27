@@ -29,7 +29,6 @@ class LinkedList{
     }
     return false;
   }
-
   print(){
     let curr = this.head;
     let res = [];
@@ -39,20 +38,44 @@ class LinkedList{
     }
     return res;
   }
+  append(val){
+    let newNode = new Node(val);
+    let curr = this.head;
+    while(curr){
+      if(curr.next === null){
+        curr.next = newNode;
+        curr=curr.next;
+      }
+      curr = curr.next;
+    }
+  }
+  insertBefore(val, newVal){
+    let curr = this.head;
+    if(this.head.val === val){
+      console.log('first');
+      let newNode = new Node(newVal, curr);
+      this.head = newNode;
+      //curr = curr.next;
+    }
+    while(curr.next){
+      if( curr.next.val === val){
+        let newNode = new Node(newVal, curr.next);
+        curr.next = newNode;
+        curr = curr.next;
+      }
+      curr = curr.next;
+    }
+  }
+  insertAfter(val, newVal){
+    let curr = this.head;
+    while(curr){
+      if(curr.val === val){
+        let newNode = new Node(newVal, curr.next);
+        curr.next = newNode;
+      }
+      curr = curr.next;
+    }
+  }
 }
-
-
-
-//let newLL = new LinkedList();
-
-// newLL.insert(2);
-// newLL.insert(3);
-// newLL.insert(4);
-// newLL.insert(45);
-//newLL.insert(100);
-//console.log(newLL);
-// newLL.print();
-// console.log(newLL.includes(2));
-// console.log(newLL.includes(24));
 
 module.exports = {Node, LinkedList};
