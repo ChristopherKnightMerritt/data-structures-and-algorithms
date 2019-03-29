@@ -6,14 +6,14 @@
 ## Challenge
 Implement a Stack and a Queue Data Structure
 
-####Stack:
+#### Stack:
 * Implement a stack made up of nodes that has a property of top.
 * Define a method `push(val)` that inserts a node to the top of the stack.
 * Define a method `pop()` that removes the top value from the stack.
 * Define a method `peek()` that returns the value of the top of the stack.
 
 
-####Queue: 
+#### Queue: 
 * Implement a queue of nodes that has a property of front.
 * Define a method `enqueue(val)` that inserts a value into the queue.
 * Define a method `dequeue()` that removes a node from the front of the queue and returns the node's value.
