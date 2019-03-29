@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms)
+
 # Stacks and Queues
 * A stack is a data structure that follows first in last out concepts. It is made up of nodes that contain a value an a pointer to the next value. Adding a value to a stack puts it on top of the other values, and removing a value takes the top value off.
 
