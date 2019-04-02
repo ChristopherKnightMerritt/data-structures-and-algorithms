@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms)
+
 # Implement a Queue using two Stacks.
 A stack is made up of nodes with a value property and a pointer property. The stacks have methods pop, push, and peek.
 
