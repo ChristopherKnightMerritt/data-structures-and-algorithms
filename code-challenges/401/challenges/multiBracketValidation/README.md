@@ -15,4 +15,4 @@ Our approach was to create a new stack, then iterate through our string. If we r
 
 
 ## Solution
-![Whiteboard](../../../../assets/balancedbracket.JPG)
+![Whiteboard](../../../assets/balancedbracket.JPG)
