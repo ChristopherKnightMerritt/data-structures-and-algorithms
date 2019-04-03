@@ -17,4 +17,4 @@ The enqueue method adds a value to the queue if it is either 'dog' or 'cat'. If 
 The dequeue method first checks if the input is either a dog or a cat. Then, while the queue still has values, check if the front value is an instance of the preferred value. If it is, remove that value from the queue. If it is not, take the current front and move it to a second queue until you find the preferred value or you reach the end.
 
 ## Solution
-![Whiteboard](../../assets/animalshelter.JPG)
+![Whiteboard](../../../assets/animalshelter.JPG)
