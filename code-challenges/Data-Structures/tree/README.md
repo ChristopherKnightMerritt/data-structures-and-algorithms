@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms)
+
 # Trees
 Binary Trees are made up of nodes that have a value, a left, and a right property. A tree consists of a root, then edges that connect the nodes together.
 
