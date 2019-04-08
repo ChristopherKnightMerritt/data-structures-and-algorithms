@@ -49,12 +49,11 @@ class BinarySearchTree {
     }
     return false;
   }
-  preOrder(node){
-    let res = [];
+  preOrder(node, res = []){
     if(node){
-      res.push(node.val);
-      this.preOrder(node.left);
-      this.preOrder(node.right);
+      res.push(node.value);
+      this.preOrder(node.left, res);
+      this.preOrder(node.right, res);
     }
     return res;
   }
@@ -79,11 +78,3 @@ class BinarySearchTree {
 }
 
 module.exports = {BinarySearchTree, Node};
-
-let binaryTree = new BinarySearchTree();
-
-
-binaryTree.add(3);
-binaryTree.add(7);
-
-console.log(binaryTree);
