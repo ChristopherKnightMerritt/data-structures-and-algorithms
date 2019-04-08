@@ -13,4 +13,4 @@ Return the tree with its new values.
 Our approach was to pass in the root node of a tree. Then, while the input is not null, check the current value to see if it is divisible by 15, 5, or 3. If it is, replace it with 'Fizzbuzz', 'Fizz', 'Buzz', respectivley. Then, recursivley call the function again with the current node. If there is a left child, use that. If there is a right child, use that. Finally, since we are mutating the original tree, return to end the function.
 
 ## Solution
-![UML]('../../../assets/fizzbuzztree.jpg')
+![Whiteboard](../../../assets/fizzbuzztree.jpg)
