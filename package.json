@@ -4,7 +4,7 @@
   "description": "",
   "main": "jest.config.js",
   "scripts": {
-    "test": "jest --coverage --verbose --testPathIgnorePatterns 'code-challenges/301/'",
+    "test": "jest --coverage --testPathIgnorePatterns 'code-challenges/301/' --verbose",
     "test-watch": "jest --coverage --verbose --watchAll",
     "lint": "eslint '**/*.js'",
     "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
