@@ -10,4 +10,4 @@ Write a breadth first traversal method which takes a Binary Tree as its unique i
 Our approach was to first create a new queue, and a new var called current, which was equal to the root of the tree. Next, we set the root to be the front of the queue. Then, we started a while loop while the queue still has values. First, dequeue the front of the queue and set that equal to current, then print that value. If the left child exists, add that to the queue. If the right child exists, add that to the queue. Repeat until the queue is empty. 
 
 ## Solution
-![Whiteboard](../../assets/breadthFirst.jpg)
+![Whiteboard](../../../assets/breadthFirst.jpg)

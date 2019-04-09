@@ -44,10 +44,14 @@ class Queue {
     }
   }
   dequeue(){
-    
-    let n = this.front.val;
-    this.front = this.front.next;
-    return n;
+    if(this.front.val !== null){
+      let n = this.front.val;
+      this.front = this.front.next;
+      return n;
+    }
+    else{
+      return null;
+    }
   }
   peek(){
     return this.front.val;
