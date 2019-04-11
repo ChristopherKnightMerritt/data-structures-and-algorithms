@@ -25,6 +25,9 @@ contains(val):
 preOrder(node)/inOrder(node)/postOrder(node):
   While the node still has value, find the smallest value, then add it to the array. Then search through by calling the preorder function again with recursion. The difference between the functions is in when the value gets pushed to the array.
 
+findMax(tree): 
+  This function takes in a tree, so it could not use recursion. By using breadth first traversal, we can add each node to a queue, then compate its value then compare it to the current largest and take the largest value. If it has any children then add them to the queue.
+
 ## API
 Available functions:
 * add(val)
@@ -32,3 +35,7 @@ Available functions:
 * preOrder(node)
 * inOrder(node)
 * postOrder(node)
+* findMax(tree)
+
+Whiteboard 4/10:
+![Whiteboard](../../assets/findmaxwb.jpg)
