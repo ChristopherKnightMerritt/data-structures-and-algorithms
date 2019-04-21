@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms)
+
 # Insertion Sort
 An insertion sort is one of the three common simple sorts.
 
