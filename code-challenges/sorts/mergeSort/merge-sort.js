@@ -33,6 +33,7 @@ let merge = (b, c, arr) => {
     k++;
   }
   if(i === b.length){
+
     c.forEach(item => {
       arr[k] = item;
       k++;
