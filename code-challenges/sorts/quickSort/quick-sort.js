@@ -17,8 +17,8 @@ let partition = (arr, left, right) => {
       low ++;
       swap(arr, i, low);
     }
-      swap(arr, right, low + 1);
-      return low + 1;
+    swap(arr, right, low + 1);
+    return low + 1;
   }
 };
 
