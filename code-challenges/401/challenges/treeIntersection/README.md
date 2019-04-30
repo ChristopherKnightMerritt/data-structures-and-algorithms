@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms)
+
 # Intersection of binary trees
 A binary tree is a data structure made up of nodes that have a left and a right child. 
 
