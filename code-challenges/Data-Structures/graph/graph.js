@@ -56,13 +56,3 @@ class Graph {
 }
 
 module.exports = { Graph };
-
-const graph = new Graph();
-let a = graph.addNode('WA');
-let b = graph.addNode('CA');
-
-graph.addUndirectedEdge(a,b);
-
-graph.print();
-console.log(graph.getNodes());
-console.log(graph.getSize());
