@@ -8,4 +8,4 @@ Extend your graph object with a breadth-first traversal method that accepts a st
 My approach was to create a queue and a results array. Add the first value in the graph (that you are checking) to the queue and to the array. While the queue is not empty, you need to get the neighbors of the current value you are looking at. If the values of the neighbors are already in the list, then move on to the next. If it is not, then add it to the queue and to the array. Return the array.
 
 ## Solution
-!(UML)[../../../assets/breadth-first-graph.JPG]
+![UML](../../../assets/breadth-first-graph.JPG)
