@@ -6,6 +6,7 @@ describe('Graphs', () => {
   let g = new Graph;
   let a = g.addNode('Hi', 1);
   let b = g.addNode('Hello', 3);
+  g.addUndirectedEdge(a,b);
   it('Node can be successfully added to the graph', () => {
     expect(g.getSize()).toEqual(2);
   });

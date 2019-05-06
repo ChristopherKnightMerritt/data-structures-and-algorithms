@@ -41,7 +41,7 @@ class Graph {
   }
   getNodes(){
     let res = [];
-    for(const[key, value] of
+    for(const[value] of
       this.adjacencyList){
       res.push(value);
     }

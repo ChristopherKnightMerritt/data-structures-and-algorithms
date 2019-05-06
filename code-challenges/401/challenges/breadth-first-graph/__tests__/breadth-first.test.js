@@ -25,5 +25,5 @@ describe('Graph', () => {
   });
   it('Should return null if no graph is passed through', ()=> {
     expect(breadthFirst(a)).toBeNull();
-  })
+  });
 });
