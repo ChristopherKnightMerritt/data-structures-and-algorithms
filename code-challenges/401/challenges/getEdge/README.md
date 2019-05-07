@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/ChristopherKnightMerritt/data-structures-and-algorithms)
+
 # Find Edges
 Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be?
 
@@ -9,4 +11,4 @@ My approach was to loop through the input array until one less than the last val
 
 
 ## Solution
-![UML](../../../assets/GetEdges.JPG)
+![UML](./../../../assets/GetEdges.jpg)
