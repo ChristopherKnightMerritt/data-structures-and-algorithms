@@ -3,6 +3,7 @@
 class Vertex {
   constructor(value){
     this.value = value;
+    this.visited = false;
   }
 }
 
