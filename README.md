@@ -2,7 +2,8 @@
 
 # Data Structures and Algorithms
 
-### Chris Merritt
+### Summary:
+A collection of data structures & code challenges written, solved, & tested by Chris Merritt.
 
 ## [Data Structures](https://github.com/ChristopherKnightMerritt/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures):
 * [Graph](https://github.com/ChristopherKnightMerritt/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/graph)
