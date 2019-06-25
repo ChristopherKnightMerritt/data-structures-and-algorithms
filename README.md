@@ -13,7 +13,7 @@ A collection of data structures & code challenges written, solved, & tested by C
 * [Queue](https://github.com/ChristopherKnightMerritt/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/queueWithStacks)
 * [Binary Tree](https://github.com/ChristopherKnightMerritt/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/tree)
 
-## [Sorts](https://github.com/ChristopherKnightMerritt/data-structures-and-algorithms/tree/master/code-challenges/sorts)
+## [Sorts:](https://github.com/ChristopherKnightMerritt/data-structures-and-algorithms/tree/master/code-challenges/sorts)
 * [Insertion Sort](https://github.com/ChristopherKnightMerritt/data-structures-and-algorithms/tree/master/code-challenges/sorts/insertionSort)
 * [Merge Sort](https://github.com/ChristopherKnightMerritt/data-structures-and-algorithms/tree/master/code-challenges/sorts/mergeSort)
 * [Quick Sort](https://github.com/ChristopherKnightMerritt/data-structures-and-algorithms/tree/master/code-challenges/sorts/quickSort)
