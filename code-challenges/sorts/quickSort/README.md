@@ -1,4 +1,4 @@
-### Lecture Notes: Quick Sort
+Quick Sort
 
 The quick sort first finds a pivot point, then sorts the two partitions on either side.
 
